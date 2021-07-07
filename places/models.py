@@ -14,7 +14,7 @@ class Place(models.Model):
     description = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    views_coiunt = models.IntegerField(default=0)
+    views_count = models.IntegerField(default=0)
     is_publicated = models.BooleanField(default=True)
 
     def __str__(self):
