@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(m-s!su&t=q^h0oe7u$64@2)v4slu70bpu1@qnqy+z)lx36yo^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -75,12 +75,25 @@ WSGI_APPLICATION = 'inturist.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db_sqlite3',
     }
 }
+
+
+#DATABASES = {
+ #   'default': {
+  #     'ENGINE': 'django.db.backends.postgresql',
+   #    'NAME': 'inturist_db',
+    #   'USER': 'postgres',
+     #  'PASSWORD': 'postgres',
+      # 'HOST': '127.0.0.1',
+       #'PORT': '5432',
+    #}
+#}
 
 
 # Password validation
